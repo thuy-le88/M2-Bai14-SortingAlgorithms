@@ -18,17 +18,19 @@ public class SelectionSorted {
             }
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println("List before sorted: ");
+    public static void printArray(double[] list) {
         for (int i=0;i<list.length;i++) {
             System.out.print(list[i]+"\t");
         }
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("List before sorted: ");
+        printArray(list);
         System.out.println();
         selectionSorted(list);
         System.out.println("List after sorted: ");
-        for (int i=0;i<list.length;i++) {
-            System.out.print(list[i]+"\t");
-        }
+        printArray(list);
     }
 }
