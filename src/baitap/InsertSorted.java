@@ -10,7 +10,7 @@ public class InsertSorted {
     }
 
     static void insertSorted(int[] list) {
-        for (int i=0;i<list.length;i++) {
+        for (int i=1;i<list.length;i++) {
             int key=list[i];
             int j=i-1;
 
