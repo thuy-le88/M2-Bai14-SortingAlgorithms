@@ -19,17 +19,26 @@ public class BubbleSortByStep {
         System.out.println("\nBegin sort processing...");
         bubbleSorted(list);
     }
-
     public static void bubbleSorted(int[] list) {
         boolean needNextPass=true;
         for (int k=1;k<list.length && needNextPass;k++) {
             needNextPass=false;
+            /* cách duyệt từ phần tử đầu tiên của mảng:
             for (int i=0;i<list.length-k;i++) {
                 if (list[i]>list[i+1]) {
                     System.out.println("Swap "+list[i]+" with "+list[i+1]);
                     int temp=list[i];
                     list[i]=list[i+1];
                     list[i+1]=temp;
+                    needNextPass=true;
+                }*/
+            // cách duyệt từ phần tử cuối cùng của mảng:
+            for (int i=list.length-1;i>=k;i--) {
+                if (list[i]<list[i-1]) {
+                    System.out.println("Swap "+list[i]+" with "+list[i-1]);
+                    int temp=list[i];
+                    list[i]=list[i-1];
+                    list[i-1]=temp;
                     needNextPass=true;
                 }
             }
